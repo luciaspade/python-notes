@@ -1,0 +1,16 @@
+1、使用的python版本：3.6.2 使用的文本编辑器：geany
+tips:
+（1）python采用的命名约定：使用小写字母，空格用下划线来表示。——因此最好都用这种方式进行存储
+（2）如果电脑中安装有多个python版本，想让geany使用python3，需要在生成（build）里选择设置生成命令
+（set build command），此时compile和excute的默认命令都是python，将它们分别修改为python3 -m py_compile "%f"和python3 "%f"即可
+（3）geany进行保存时需自行输入扩展名而不会有选择框弹出
+（4）在geany中编写代码存储为.py后，可以直接在geany中点执行（execute）直接看到运行结果，但如果编写的程序十分复杂就需要从终端运行运行了。
+（5）想要终端上显示hellopythonworld是很简单的，只需要一行代码。即print("HelloPythonworld!")
+
+2、从终端运行python程序
+（1）利用cd命令找到文件，cd/d x: 是跳转到某个盘（也可以直接输入x:来进行盘的跳转），在同级根目录下可以直接使用cd xxx\xx来跳转掉xx文件夹，用cd..返回上层目录，用cd/ 返回根目录
+tips：注意提示符c:\>的意思，c:说明现在的工作盘是c盘，\告诉我们当前的工作目录是根目录，>的作用是把工作目录和我们要输入的命令分隔开来。
+
+（2）进入需要运行的py文件所在的目录后，可以输入xxx.py或python xxx.py来运行，需不需要用dir xxx.py确认文件存在与否看个人需求。
+
+
