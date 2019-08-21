@@ -1,2 +1,13 @@
-# python-notes
-I'm new to programming. It's my note for python learning.  
+My Python Notes
+====
+提要
+----
+跨专业学习，初心者，学习笔记
+
+简介
+----
+这是我作为程序初心者的学习笔记和练习，希望能真正有所进步。<br>
+目前在看的教程有《python编程：从入门到实践》，同时报了风变的课程，
+笔记会结合两边的知识以及练习过程中遇到的困难进行记录。
+
+
