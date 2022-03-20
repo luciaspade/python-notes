@@ -1,14 +1,11 @@
 My Python Notes
 ====
-提要
+About me
 ----
-跨专业学习，初心者，学习笔记
+cross major learner, have finished basic lessons of python, pursuing data science and machine learning related knowledge 
 
-简介
+Description
 ----
-这是我作为程序初心者的学习笔记和练习，希望能有所收获。<br>
+solutions and functions <br>
 
-目前在看的教程有《python编程：从入门到实践》，同时报了风变的课程，<br>
-笔记会结合两边的知识以及练习过程中遇到的困难进行记录。
-
-
+to prevent forgetting<br>
