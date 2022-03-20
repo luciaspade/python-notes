@@ -1,0 +1,21 @@
+# single-thread: cpu → IO → CPU → IO
+  single-thread: cpu → CPU  →   CPU 
+                       IO → IO 
+  multiprocessing(multicpu): cpu → IO →
+                             cpu → IO →
+  hadoop/hive/spark: machine 1
+                     machine 2
+                     
+# cpu-bound(the time for a computer to complete a task is determined principally by the speed of the central processor: processer utilization is high)
+           eg. compressing and decompressin, encryption and decryption, regular expression searching
+  I/O bound(the time for a computer to complete a task is determined principally by the period spent waiting for input/output operations to be completed)
+           eg. file processing, web crawler, input/output database
+           
+# 多进程process(multiprocessing)   多线程thread(threading)   多协程coroutine(asycio) 
+  A process can have many threads and a thread can have many coroutines inside it
+  multiprocessing: Parallelism, tasks can literally run at the same time on a machine with multiple cpus. # 唯一可以用多核cpu并行运算的，但占用资源最多，可启动数目比线程少
+                   适用cpu-bound
+  threading: Concurrency, tasks dont't have to run simultaneously —— they just need to make progress in an overlapping manner. # 比进程轻量，占用资源更少，但有GIL不能利用多cpu
+             适用I/O boound
+  coroutine: #占用资源最少，启动数量最多，但支持的库有限（不支持requests只支持aiohttp），代码实现复杂
+             适用I/O boound，超多任务运行，有现成库支持
