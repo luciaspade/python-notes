@@ -19,3 +19,5 @@ wi=α(1−α)^iifi<t
 
 这种情况下，假定历史数据是无限长的。
 
+参考以下网址：
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.ewm.html
