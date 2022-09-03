@@ -5,7 +5,17 @@ EMA（today）=α * Price（today） + ( 1 - α ) * EMA（yesterday）;
 这里可以看到一个问题，如果是N>1,则存在EMA（0）的取值问题，一般可以取值EMA（0）= Price
 
 ewm()可以进行这种计算，值得注意的是，参数里的adjust可选True或False，代表不同的加权方法
-当adjust = True（默认）时，将使用权重(1-α)^(n-1), (1-α)^(n-2),...1-α, 1来计算加权平均值。
+当adjust = True（默认）时，将使用yt=Xt+(1−α)Xt−1+(1−α)^2xt−2+...+(1−α)^tX0/1+(1−α)+(1−α)^2+...+(1−α)^t来计算加权平均值。
+这是考虑到历史数据的有限性,如果历史数据趋于无限的话，这个表达式的分母会变为 1/1−(1−α)
+
 当adjust = False时，按照下式递归计算加权平均值：
-weightd_average[0] = arg[0];
-weighted_avreaged[i] = (1-α) * weighted_average[i-1] + α * arg[i]  # 这个更符合kdj的计算
+y0=x0,
+yt=(1−α)yt−1+αxt
+y0=x0,yt=(1−α)yt−1+αxt
+
+等价于
+wi=α(1−α)^iifi<t
+(1−α)^iifi=t
+
+这种情况下，假定历史数据是无限长的。
+
